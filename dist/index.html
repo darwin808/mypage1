@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>mypagev1</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link href="/css/app.f0537502.css" rel="preload" as="style"><link href="/css/chunk-vendors.7ec37376.css" rel="preload" as="style"><link href="/js/app.dd1c0e51.js" rel="preload" as="script"><link href="/js/chunk-vendors.5f18fd96.js" rel="preload" as="script"><link href="/css/chunk-vendors.7ec37376.css" rel="stylesheet"><link href="/css/app.f0537502.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but mypagev1 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script><script>const OPTS = {
+  fill:           'none',
+  radius:         25,
+  strokeWidth:    { 50 : 0 },
+  scale:          { 0: 1 },
+  angle:          { 'rand(-35, -70)': 0 },
+  duration:       500,
+  left: 0,        top: 0,
+  easing: 'cubic.out'
+};
+
+const circle1 = new mojs.Shape({
+  ...OPTS,
+  stroke:         'cyan',
+});
+
+const circle2 = new mojs.Shape({
+  ...OPTS,
+  radius:         { 0 : 15 },
+  strokeWidth:    { 30: 0 },
+  stroke:         'magenta',
+  delay:          'rand(75, 150)'
+});
+
+document.addEventListener( 'click', function (e) {
+  
+   circle1
+    .tune({ x: e.pageX, y: e.pageY  })
+    .replay();
+  
+  circle2
+    .tune({ x: e.pageX, y: e.pageY  })
+    .replay();
+  
+});</script><script src="/js/chunk-vendors.5f18fd96.js"></script><script src="/js/app.dd1c0e51.js"></script></body></html>
